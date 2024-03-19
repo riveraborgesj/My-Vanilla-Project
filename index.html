@@ -15,21 +15,40 @@
       href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
     <title>Vanilla Project</title>
     <link rel="stylesheet" href="INDEX.CSS" />
   </head>
   <body class="montserrat-font">
     <div class="container">
       <header>
-        <form>
-          <input type="search" placeholder="Enter a city" required />
-          <input type="submit" value="search" />
+        <img
+          class="logo"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/119/867/original/Beauty_and_Fashion_Logo_%282%29.png?1710882100"
+          alt="logo"
+        />
+        <form class="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city"
+            required
+            class="search-form-input"
+          />
+          <input type="submit" value="🔍" class="search-submit-button" />
         </form>
       </header>
-      <h1 class="passion-one-bold">22°F</h1>
+      <div class="temp-element">
+        <h1 class="passion-one-bold">
+          <span class="temp">22</span>
+          <span class="temp-unit">°F</span>
+        </h1>
+      </div>
       <p>Mon. Tues. Wed. Thur. Fri. Sat.</p>
-      <div class="passion-one-regular">
-        <h2>Fayetteville, NC</h2>
+      <div>
+        <h2 class="passion-one-regular">Fayetteville, NC</h2>
         <p class="date-time">
           Thursday, 1700
           <br />

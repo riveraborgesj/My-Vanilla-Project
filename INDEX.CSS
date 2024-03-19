@@ -4,9 +4,46 @@ body {
 }
 h2 {
   margin: 0px;
+  font-size: 60px;
 }
+h1 {
+  font-size: 200px;
+  margin: 20px 0px;
+  animation-duration: 2s;
+  animation-name: testSlide;
+}
+
+footer {
+  text-align: center;
+  font-size: smaller;
+}
+a {
+  color: #e7c6c6;
+}
+
+@keyframes testSlide {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 10px;
+  }
+}
+.logo {
+  max-width: 100%;
+}
+
 .date-time {
   margin: 0px 0px 20px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 25px;
+}
+.temp-unit {
+  font-size: 60px;
+  position: relative;
+  top: -80px;
+  left: -30px;
 }
 .container {
   background-color: white;
@@ -39,4 +76,23 @@ h2 {
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
+}
+.search-form-input {
+  border-color: #e2d1c3;
+  border-radius: 5px;
+  border-style: solid;
+  width: 80%;
+  padding: 17px;
+  font-size: 13px;
+}
+.search-submit-button {
+  padding: 15px 35px;
+  background-color: #e2d1c3;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  max-width: 100%;
+  transform: translateY(2px);
 }
