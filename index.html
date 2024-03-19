@@ -3,37 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Passion+One:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
     <title>Vanilla Project</title>
+    <link rel="stylesheet" href="INDEX.CSS" />
   </head>
-  <body>
-    <header>
-      <form>
-        <input type="search" placeholder="Enter a city" required />
-        <input type="submit" value="search" />
-      </form>
-    </header>
-    <h1>22°F</h1>
-    <p>The forecast</p>
-    <h2>Fayetteville, NC</h2>
-    <p>
-      Thursday, 1700
-      <br />
-      Jan 13th, 2024
-    </p>
+  <body class="montserrat-font">
+    <div class="container">
+      <header>
+        <form>
+          <input type="search" placeholder="Enter a city" required />
+          <input type="submit" value="search" />
+        </form>
+      </header>
+      <h1 class="passion-one-bold">22°F</h1>
+      <p>Mon. Tues. Wed. Thur. Fri. Sat.</p>
+      <div class="passion-one-regular">
+        <h2>Fayetteville, NC</h2>
+        <p class="date-time">
+          Thursday, 1700
+          <br />
+          Jan 13th, 2024
+        </p>
+      </div>
+      <footer>
+        This project was coded by
+        <a href="https://github.com/riveraborgesj" target="_blank"
+          >Janely Osorio-Rivera</a
+        >
+        and is code hosted on
+        <a
+          href="https://github.com/riveraborgesj/My-Vanilla-Project"
+          target="_blank"
+          >Github</a
+        >, and website hosted on
+        <a href="https://main--myvanillaproject.netlify.app/" target="_blank"
+          >Netlify.</a
+        >
+      </footer>
+    </div>
   </body>
-  <footer>
-    This project was coded by
-    <a href="https://github.com/riveraborgesj" target="_blank"
-      >Janely Osorio-Rivera</a
-    >
-    and is code hosted on
-    <a
-      href="https://github.com/riveraborgesj/My-Vanilla-Project"
-      target="_blank"
-      >Github</a
-    >, and website hosted on
-    <a href="https://main--myvanillaproject.netlify.app/" target="_blank"
-      >Netlify.</a
-    >
-  </footer>
 </html>
