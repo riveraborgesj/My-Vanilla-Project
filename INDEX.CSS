@@ -8,7 +8,7 @@ h2 {
 }
 h1 {
   font-size: 200px;
-  margin: 20px 0px;
+  margin: 20px 0px 0px;
   animation-duration: 2s;
   animation-name: testSlide;
 }

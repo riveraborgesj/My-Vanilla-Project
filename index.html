@@ -30,12 +30,13 @@
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/119/867/original/Beauty_and_Fashion_Logo_%282%29.png?1710882100"
           alt="logo"
         />
-        <form class="search-form">
+        <form class="search-form" id="search-form">
           <input
             type="search"
             placeholder="Enter a city"
             required
             class="search-form-input"
+            id="search-form-input"
           />
           <input type="submit" value="🔍" class="search-submit-button" />
         </form>
@@ -46,15 +47,15 @@
           <span class="temp-unit">°F</span>
         </h1>
       </div>
-      <p>Mon. Tues. Wed. Thur. Fri. Sat.</p>
       <div>
-        <h2 class="passion-one-regular">Fayetteville, NC</h2>
+        <h2 class="passion-one-regular" id="city">Fayetteville, NC</h2>
         <p class="date-time">
           Thursday, 1700
           <br />
           Jan 13th, 2024
         </p>
       </div>
+      <p>Mon. Tues. Wed. Thur. Fri. Sat.</p>
       <footer>
         This project was coded by
         <a href="https://github.com/riveraborgesj" target="_blank"
@@ -71,5 +72,6 @@
         >
       </footer>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
