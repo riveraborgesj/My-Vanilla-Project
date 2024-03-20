@@ -20,7 +20,9 @@ footer {
 a {
   color: #e7c6c6;
 }
-
+strong {
+  color: #e7c6c6;
+}
 @keyframes testSlide {
   from {
     margin-left: -100%;
