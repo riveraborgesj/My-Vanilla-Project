@@ -37,7 +37,17 @@ a {
 strong {
   color: #e7c6c6;
 }
-
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+.weather-forecast-date {
+  font-size: 18px;
+  opacity: 0.6;
+}
+.forecast-min {
+  opacity: 0.6;
+}
 .weather-app-data {
   display: flex;
   justify-content: space-between;
