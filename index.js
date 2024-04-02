@@ -59,4 +59,33 @@ function handleSearchSubmit(event) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+
+  let days = ["Wed", "Thu", "Fri", "Sat", "Sun", "Mon"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      ` 
+    <div class="weather-forecast-day">
+      <div class="weather-forecast-date">${day}</div>
+        <div class="weather-forecast-icon">
+          <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/121/537/original/raincloud.jpeg?1712079775"
+          alt="rain cloud"
+          width="36"
+          />
+        </div>
+    <div class="weather-forecast-temperatures">
+      <span class="forecast-max">64°</span>
+      <span class="forecast-min">49°</span>
+    </div>
+    </div>
+    `;
+  });
+  forecast.innerHTML = forecastHtml;
+}
 searchCity("Raleigh");
+displayForecast();

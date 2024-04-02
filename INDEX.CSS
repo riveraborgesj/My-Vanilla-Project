@@ -27,6 +27,9 @@ h1 {
     transform: translateX(0px);
   }
 }
+main {
+  margin-bottom: 20px;
+}
 footer {
   text-align: center;
   font-size: smaller;
@@ -38,6 +41,8 @@ strong {
   color: #e7c6c6;
 }
 .weather-forecast {
+  display: flex;
+  justify-content: space-around;
   margin-top: 20px;
   text-align: center;
 }
