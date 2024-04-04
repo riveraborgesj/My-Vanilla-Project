@@ -50,6 +50,11 @@ strong {
   font-size: 18px;
   opacity: 0.6;
 }
+.weather-forecast-icon {
+  width: 88px;
+  display: block;
+  margin: 0 auto;
+}
 .forecast-min {
   opacity: 0.6;
 }
@@ -59,6 +64,8 @@ strong {
 }
 
 .weather-app-icon {
+  width: 200px;
+  height: 200px;
   position: relative;
   top: 50px;
   animation: 1.2s ease-in 0s 1 slideInFromRight;

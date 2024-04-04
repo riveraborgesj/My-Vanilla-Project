@@ -61,6 +61,13 @@ function handleSearchSubmit(event) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
 function getForecast(city) {
   let apiKey = "3b64aa0add5f4a0fc04de440775caeot";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
@@ -72,28 +79,28 @@ function displayForecast(response) {
 
   let forecast = document.querySelector("#forecast");
 
-  let days = ["Wed", "Thu", "Fri", "Sat", "Sun", "Mon"];
   let forecastHtml = "";
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      ` 
-    <div class="weather-forecast-day">
-      <div class="weather-forecast-date">${day}</div>
-        <div class="weather-forecast-icon">
-          <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/121/537/original/raincloud.jpeg?1712079775"
-          alt="rain cloud"
-          width="36"
-          />
-        </div>
-    <div class="weather-forecast-temperatures">
-      <span class="forecast-max">64°</span>
-      <span class="forecast-min">49°</span>
-    </div>
-    </div>
-    `;
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        ` 
+      <div class="weather-forecast-day">
+      <div class="weather-forecast-date">${formatDay(day.time)}</div>
+      <div class="weather-forecast-icon">
+      <img
+      src="${day.condition.icon_url}"
+      width="36"
+      />
+      </div>
+      <div class="weather-forecast-temperatures">
+      <span class="forecast-max">${Math.round(day.temperature.maximum)}</span>
+      <span class="forecast-min">${Math.round(day.temperature.minimum)}</span>
+      </div>
+      </div>
+      `;
+    }
   });
   forecast.innerHTML = forecastHtml;
 }
